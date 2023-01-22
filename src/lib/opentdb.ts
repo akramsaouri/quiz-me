@@ -30,3 +30,19 @@ export const getTrivia = (
     `api.php?amount=${QUIZ_LENGTH}&category=${categoryID}&type=${QUIZ_TYPE}`
   );
 };
+
+interface LookupCategoryResponse {
+  category_id: number;
+  category_question_count: {
+    total_question_count: number;
+    total_easy_question_count: number;
+    total_medium_question_count: number;
+    total_hard_question_count: number;
+  };
+}
+
+export const lookupCategory = (
+  categoryID: string
+): Promise<AxiosResponse<LookupCategoryResponse>> => {
+  return client.get(`/api_count.php?category=${categoryID}`);
+};

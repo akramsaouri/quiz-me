@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  padding: var(--gap-md) 32px;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px -10px rgb(31 18 53 / 60%);
+  border-color: transparent;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.icon {
+  min-width: 24px;
+  height: 24px;
+  margin-right: var(--gap-xs);
+}
+
+.primary {
+  background-color: var(--color-highlight);
+}
+
+.success {
+  background-color: #b8c1ec;
+}
