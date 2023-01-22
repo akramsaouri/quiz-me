@@ -1,5 +1,4 @@
 .main {
-  background-color: var(--background-secondary);
   min-height: 100vh;
   padding: var(--gap-xl) var(--gap-md);
   display: flex;
@@ -10,6 +9,13 @@
 .header {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 375px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    .category {
+      margin-top: var(--gap-xs);
+    }
+  }
 }
 
 .goBackLink {
@@ -39,6 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: var(--gap-md);
 }
 

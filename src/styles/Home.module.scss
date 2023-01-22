@@ -1,5 +1,4 @@
 .main {
-  background-color: var(--background-secondary);
   padding: var(--gap-xl) var(--gap-md);
 }
 
@@ -8,7 +7,7 @@
   @media screen and (min-width: 720px) {
     display: flex;
     .content {
-      width: 40%;
+      width: 60%;
     }
     .illustration {
       width: 60%;
@@ -28,7 +27,7 @@
 .list {
   display: grid;
   gap: var(--gap-sm);
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
 .headline {

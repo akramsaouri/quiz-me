@@ -8,7 +8,7 @@
 
 .heading {
   font-size: var(--font-size-md);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   margin-bottom: var(--gap-md);
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
 }
 
 .content {
-  font-weight: 700;
+  font-weight: var(--font-weight-normal);
   font-size: var(--font-size-xl);
   text-align: center;
 }

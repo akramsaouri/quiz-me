@@ -71,7 +71,7 @@ const TriviaPage: NextPage<TriviaPageProps> = ({ trivias }) => {
         <Link href="/" className={styles.goBackLink}>
           Change category
         </Link>
-        <span className={styles.category}>Art</span>
+        <span className={styles.category}>{trivias[0].category}</span>
       </div>
       {finished ? (
         <div className={styles.score}>

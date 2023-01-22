@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondary);
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  padding: var(--gap-xs) 0;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  font-size: var(--font-size-md);
+}

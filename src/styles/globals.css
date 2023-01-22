@@ -14,9 +14,19 @@
   --color-secondary: #fffffe;
   --color-ternary: #b8c1ec;
   --color-highlight: #eebbc3;
-  --font-size-md: 20px;
-  --font-size-lg: 32px;
-  --font-size-xl: 48px;
+  --font-size-md: 16px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
+
+@media screen and (min-width: 720px) {
+  :root {
+    --font-size-md: 20px;
+    --font-size-lg: 32px;
+    --font-size-xl: 48px;
+  }
 }
 
 * {
