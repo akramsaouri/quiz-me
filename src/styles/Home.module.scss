@@ -4,18 +4,22 @@
 }
 
 .hero {
-  display: flex;
   margin-bottom: var(--gap-xl);
-}
-
-.content {
-  width: 40%;
+  @media screen and (min-width: 720px) {
+    display: flex;
+    .content {
+      width: 40%;
+    }
+    .illustration {
+      width: 60%;
+    }
+  }
 }
 
 .illustration {
-  width: 60%;
   display: flex;
   justify-content: flex-end;
+  margin-top: var(--gap-md);
   svg {
     max-height: 500px;
   }
