@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
-import styles from "../styles/Layout.module.scss";
 import { Lato } from "@next/font/google";
 import cn from "classnames";
+import type { AppProps } from "next/app";
+import styles from "../styles/Layout.module.scss";
 
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] });
 

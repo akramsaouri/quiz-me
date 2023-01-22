@@ -1,8 +1,7 @@
 import Button from "@/components/Button";
 import ProgressBar from "@/components/ProgressBar";
-import SummaryCard from "@/components/SummaryCard";
+import Summary from "@/components/Summary";
 import CheckIcon from "@/icons/CheckIcon";
-import PercentIcon from "@/icons/PercentIcon";
 import ThumbsDownIcon from "@/icons/ThumbsDownIcon";
 import ThumbsUPIcon from "@/icons/ThumbsUPIcon";
 import TimesIcon from "@/icons/TimesIcon";
@@ -75,20 +74,11 @@ const TriviaPage: NextPage<TriviaPageProps> = ({ trivias }) => {
       </div>
       {finished ? (
         <div className={styles.score}>
-          <div className={styles.summary}>
-            <SummaryCard heading="Score" icon={<PercentIcon />}>
-              {(correctAnswers / trivias.length) * 100}%
-            </SummaryCard>
-            <SummaryCard
-              heading="Number of correct answers"
-              icon={<CheckIcon />}
-            >
-              {correctAnswers}
-            </SummaryCard>
-            <SummaryCard heading="Number of wrong answers" icon={<TimesIcon />}>
-              {wrongAnswers}
-            </SummaryCard>
-          </div>
+          <Summary
+            correctAnswers={correctAnswers}
+            wrongAnswers={wrongAnswers}
+            questionCount={trivias.length}
+          />
           <div className={styles.share}>
             <Button icon={<TwitterIcon />}>Share results on twitter</Button>
           </div>
