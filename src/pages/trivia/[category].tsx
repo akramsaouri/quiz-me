@@ -12,6 +12,7 @@ import { GetServerSideProps, NextPage } from "next";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import styles from "../../styles/Trivia.module.scss";
+import { motion } from "framer-motion";
 
 interface TriviaPageProps {
   trivias: Trivia[];
@@ -109,13 +110,19 @@ const TriviaPage: NextPage<TriviaPageProps> = ({ trivias }) => {
             </Button>
           </div>
           {showFeedback && (
-            <div className={styles.feedback}>
+            <motion.div
+              className={styles.feedback}
+              animate="active"
+              variants={feedbackVariants(
+                answer.answer === answer.correctAnswer ? "UP" : "DOWN"
+              )}
+            >
               {answer.answer === answer.correctAnswer ? (
                 <ThumbsUPIcon />
               ) : (
                 <ThumbsDownIcon />
               )}
-            </div>
+            </motion.div>
           )}
         </>
       )}
@@ -124,6 +131,20 @@ const TriviaPage: NextPage<TriviaPageProps> = ({ trivias }) => {
 };
 
 export default TriviaPage;
+
+const feedbackVariants = (type: "UP" | "DOWN") => {
+  const y = type === "DOWN" ? -8 : 8;
+  return {
+    active: {
+      y: [y, 0, y, 0],
+      opacity: 1,
+    },
+    idle: {
+      y: 0,
+      opacity: 0,
+    },
+  };
+};
 
 export const getServerSideProps: GetServerSideProps<TriviaPageProps> = async ({
   query,

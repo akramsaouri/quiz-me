@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react";
 import cn from "classnames";
+import React, { FC, ReactNode } from "react";
 import styles from "./button.module.scss";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
